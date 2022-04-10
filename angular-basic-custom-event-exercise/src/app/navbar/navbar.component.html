@@ -1,1 +1,6 @@
-<input type="text" placeholder="Search" [(value)]="mySearch" />
+<input
+  type="text"
+  placeholder="Search"
+  [(ngModel)]="mySearch"
+  (input)="onMySearchEvent()"
+/>

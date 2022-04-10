@@ -1,1 +1,2 @@
-<app-navbar (searchResult)="mySearch($event)"></app-navbar>
+<app-navbar (mySearchEvent)="searchResultCatcher($event)"></app-navbar>
+<p>{{ searchResult }}</p>

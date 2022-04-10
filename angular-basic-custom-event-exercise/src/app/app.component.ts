@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basic-custom-event-exercise';
+  searchResult: string;
+
+  searchResultCatcher(event) {
+    this.searchResult = event;
+  }
 }

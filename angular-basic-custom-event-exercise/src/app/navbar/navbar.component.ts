@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,14 +6,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  @Output() mySearch = new EventEmitter<string>();
-  featureSelected = new EventEmitter<string>();
-
-  onSearch(value: string) {
-    this.mySearch.emit(value);
-  }
+  @Output() mySearchEvent: EventEmitter<string> = new EventEmitter<string>();
+  mySearch: string = '';
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onMySearchEvent() {
+    this.mySearchEvent.emit(this.mySearch);
+  }
 }
